@@ -1,5 +1,6 @@
 package entities;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -43,7 +44,7 @@ public class Client {
 	 * Liste des emprunt clients
 	 */
 	@OneToMany(mappedBy="client")
-	private Set<Emprunt> emprunt;
+	private Set<Emprunt> emprunt = new HashSet<Emprunt>();
 
 	/**
 	 * Constructeur 
